@@ -27,7 +27,7 @@ var Game = {
       m("p", {class: "text-5xl font-bold my-4"}, prob.a + " + " + prob.b + " = __"),
       m("table", {class: "self-center mx-auto my-4"},  
         [0,1].map(row => m("tr",
-          [0,1,2,3,4].map(col => m("td",  {class: "p-1"}, m("button", {onclick: () => numclick(row*5 + col + 1, prob.ans), class: dis.includes(row*5 + col + 1) ? "bg-red-500 hover:bg-red-700 text-white font-bold text-3xl w-16 h-12 rounded" : "bg-blue-500 hover:bg-blue-700 text-white font-bold text-3xl w-16 h-12 rounded"}, dis.includes(row*5 + col + 1) ? "X" : row*5 + col + 1)))
+          [0,1,2,3,4].map(col => m("td",  {class: "p-1"}, m("button", {onclick: () => numclick(row*5 + col + 1, prob.ans), style: "width: 3.4rem;", class: dis.includes(row*5 + col + 1) ? "bg-red-500 hover:bg-red-700 text-white font-bold text-3xl h-12 rounded" : "bg-blue-500 hover:bg-blue-700 text-white font-bold text-3xl h-12 rounded"}, dis.includes(row*5 + col + 1) ? "X" : row*5 + col + 1)))
         ))
       ),
       m("p", {class: "text-6xl"}, msg)
